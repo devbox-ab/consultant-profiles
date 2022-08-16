@@ -1,0 +1,343 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% My CV
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[9pt]{template} % Default font size, values from 8-12pt are recommended
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%  TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.55\textwidth} % 45% of the page width for name
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  % If your name is very short, use just one of the lines below
+  % If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{MARTIN ERICSON}}}} % Name
+
+  \vspace{6pt}
+
+  {\huge Software Developer} % Career or current job title
+\end{minipage}
+\begin{minipage}[t]{0.28\textwidth} % 34.5% of the page width for the first row of icons
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+  % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+  \icon{MapMarker}{12}{Stockholm, Sweden}\\
+  \icon{Phone}{12}{+46 (0) 73 039 52 08}\\
+  \icon{At}{12}{\href{mailto:martin@devbox.com}{martin@devbox.com}}\\
+\end{minipage}
+\begin{minipage}[t]{0.285\textwidth} % 28.5% of the page width for the second row of icons
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+  % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+  % \icon{Globe}{12}{\href{https://example.com}{example.com}}\\
+  \icon{Github}{12}{\href{https://github.com/meric426}{github.com/meric426}}\\
+  \icon{Key}{12}{\href{https://keybase.io/meric426}{keybase.io/meric426}}\\
+\end{minipage}
+
+\vspace{0.5cm}
+
+%----------------------------------------------------------------------------------------
+%  INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+\cvsect{Who is Martin?}
+
+\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+  Experienced software developer with both ar- chitectural and construction knowledge.\\
+
+  He has a deep and broad technical knowledge and interest, and can quickly familiarize himself with new application and technology environments.\\
+
+  Martin works well in team and have good social skills. Martin has a broad and deep knowledge of object-oriented programming and has been developing since 2000.
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+  \begin{barchart}{5.0}
+    \baritem{Ruby}{100}
+    \baritem{HTML/CSS}{85}
+    \baritem{Terraform}{70}
+    \baritem{JavaScript}{60}
+    \baritem{Python}{50}
+  \end{barchart}
+\end{minipage}
+
+\begin{center}
+  \bubbles{4/API design, 6/Backend, 4/Frontend, 5/Infra, 2/Networking}
+\end{center}
+
+
+%----------------------------------------------------------------------------------------
+%  EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\cvsect{Experience}
+
+\begin{entrylist}
+  \entry
+    {Sept 2022 -- Present\\\footnotesize{via Devbox}}
+    {Software developer}
+    {ApoEx}
+    {ApoEx deals with medicine and custom medication manufacturing. While working here I was part of the team that worked on software that administrated and oversees the manufacturing and shipping of personalized medication.\\
+      \texttt{Ruby}\slashsep
+      \texttt{PostgreSQL}\slashsep
+      \texttt{Kubernetes}\slashsep
+      \texttt{Terraform}\slashsep
+      \texttt{MSSQL}
+    }
+  \entry
+    {Nov. 2018 -- Present}
+    {CEO}
+    {Devbox AB}
+    {Based in Stockholm, Sweden, Devbox is a technical solutions company and we help our clients build highly scalable, fault-tolerant and fast web solutions.\\
+     Devbox has 3 employees as of June 2020.}
+  \entry
+    {Sep. 2015 -- Mar. 2019}
+    {Backend developer}
+    {Hemnet}
+    {Hemnet is Sweden’s largest property portal and one of the largest websites overall, with millions of unique visitors each week. About 1/4 of the Swedish population visits Hemnet occasionally.\\
+      I was part of the property search team building robust user-facing features and implemented a new parallel search backend using Elasticsearch. The design was inspired by the OSI model in that we utilize layers to represent the different stages. Also worked closely with our mobile development team to replace the old legacy REST api with a new public GraphQL API.\\
+      \texttt{Ruby}\slashsep
+      \texttt{PostgreSQL}\slashsep
+      \texttt{GraphQL}\slashsep
+      \texttt{Elasticsearch}\slashsep
+      \texttt{React}
+    }
+  \entry
+    {Aug. 2014 -- Sep. 2015}
+    {Chief Technology Officer}
+    {Vimy}
+    {Vimy is a job search app. I lead a team of 4 developers. Built the backend service of the app/web in node with mongoDB running on EC2. Learned react-native and replaced our older app built in Ionic.\\
+      \texttt{Node}\slashsep
+      \texttt{MongoDB}\slashsep
+      \texttt{React native}
+    }
+  \entry
+    {Jun. 2013 – Oct. 2014\\\footnotesize{continued from previous}}
+    {Co-Founder}
+    {Give AB}
+    {Creddly pivoted to become a social gifting app called Give with 10,000 users. We raised 2.1M SEK via FundedByMe and focused on building a B2B gifting service which was as seamless and great for both companies and consumers. Give had 45 businesses using the service. Built with the same technology as Creddly but with every service running in their own Docker container running across multiple EC2 data centers.\\
+      \texttt{Node}\slashsep
+      \texttt{MongoDB}\slashsep
+      \texttt{Redis}\slashsep
+      \texttt{Docker}
+    }
+  \entry
+    {Jun. 2013 -- Oct. 2014}
+    {Senior developer -> CTO}
+    {Creddly AB}
+    {Creddly was a social shopping app for both iOS and Android. I was in charge of replacing an older backend API with a new backend designed as multiple services (media server, product scraper, app/web api, manager, analytics) built in node.js with mongoDB/redis as database. Set up with a no single point of failure architecture across multiple EC2 instances on AWS.\\
+      \texttt{Node}\slashsep
+      \texttt{MongoDB}\slashsep
+      \texttt{Redis}
+    }
+  \entry
+    {2010 -- Jun. 2013\\\footnotesize{continued from previous}}
+    {Chief Technology Officer}
+    {Return Great AB}
+    {After being acquired by Return Great in 2012 i joined the company as CTO. Our idea was that we iterated and improved our clients business ideas, developed them and returned a great product. We were also in charge of ComHem and Mekonomens’s web based systems.\\
+      \texttt{Python}\slashsep
+      \texttt{PostgreSQL}\slashsep
+      \texttt{ZeroMQ}\slashsep
+      \texttt{Redis}
+    }
+  \entry
+    {2010 -- Jun. 2013\\\footnotesize{continued from previous}}
+    {Co-Founder}
+    {Stampr}
+    {While running Devbox we had a lot of different ideas we wanted to try out ourselves and Stampr was one of those ideas. The idea was to centralize all your loyalty and punch cards in a mobile app. I was in charge of developing the location based backend service.\\
+      I sold my shares in 2013 due to different views on how to run things.\\
+      \texttt{Python}\slashsep
+      \texttt{PostgreSQL}
+    }
+  \entry
+    {2010 -- 2012}
+    {CEO}
+    {Devbox}
+    {I started Devbox in 2010 as an consulting firm focusing mainly on web/iOS development, we grew to 6 employees and were later acquired by Return Great AB in 2012.}
+  \entry
+    {2008 -- 2010}
+    {Lead Frontend developer}
+    {Aurathon}
+    {Developed Aurathon’s own social gaming platform where users could buy and download PC games, earn points by engaging in gaming-related activities and curate gaming news. These points could be exchanged for new games. After purchasing/achieving games you could re-sell those games as an affiliate earning more points.\\
+      A fun project I worked on at Aurathon was a real-time web based chat built using scraps from Google Wave. It was based on a ground-breaking (at the time) technique called HTTP Long polling.\\
+      \texttt{PHP}\slashsep
+      \texttt{MySQL}\slashsep
+      \texttt{Redis}\slashsep
+      \texttt{Wave protocol}
+    }
+  \entry
+    {2007 -- 2008\\\footnotesize{at Paradox Interactive}}
+    {Full-stack developer}
+    {GamersGate}
+    {While working at Paradox Interactive I was also the sole developer on their portal for digital distribution of their own and published PC games. When I first started they were running a custom built Joomla-template as a digital store which wasn’t ideal.\\
+      I replaced the Joomla platform with a custom built one (CMS, CRM, Analytics and Reports) written in CodeIgniter (PHP) and MySQL without downtime.\\
+      GamersGate sales totaled 15M SEK in 2008 running my platform..\\
+      \texttt{PHP}\slashsep
+      \texttt{MySQL}\slashsep
+      \texttt{nginx}
+    }
+  \entry
+    {2007 -- 2008}
+    {Full-stack developer}
+    {Paradox Interactive}
+    {I was in charge of Paradox Interactive website and various sites of games we built and published. I developed our own CMS using CodeIgniter (PHP) and MySQL running on multiple servers behind a nginx load balancer.\\
+      \texttt{PHP}\slashsep
+      \texttt{MySQL}\slashsep
+      \texttt{nginx}
+    }
+  \entry
+    {2002}
+    {Founder}
+    {ecrana.se}
+    {While learning how to build web pages in PHP with MySQL i built my own text-based action-RPG which after launch grew to 15,000 active users (1,500 concurrent) \textbf{in a week}. I ran my project on a small 29 SEK a month web-hotel and unfortunately was shutdown after only a week due to too much traffic. Since I was only 15 at the time with no monetization and no income I had to permanently shut down the project.\\
+      \texttt{PHP}\slashsep
+      \texttt{MySQL}\slashsep
+      \texttt{Apache}
+    }
+\end{entrylist}
+
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%  ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.2\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  \cvsect{Languages}
+
+  \textbf{Swedish} - native\\
+  \textbf{English} - proficient
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.39\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  \cvsect{Personal life \& Hobbies}
+
+  I’m 33 years old and I live in Stureby, Enskede with my wife and 3 kids.\\
+  As hobbies I love riding my custom built road bike, playing golf, watching movies and playing video games.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  \cvsect{Certificates}
+
+  \begin{itemize}
+    \item AWS Developer {\footnotesize{Associate}}
+    \item AWS Solutions Architect {\footnotesize{Associate}}
+  \end{itemize}
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%  Tools and skills
+%----------------------------------------------------------------------------------------
+
+\cvsect{Tools and skills}
+
+\begin{minipage}[t]{0.3\textwidth} %
+  \vspace{-\baselineskip}
+
+  \textbf{Languages}
+  \begin{itemize}
+      \item Go {\footnotesize (entry-level)}
+      \item JavaScript {\footnotesize (intermediary)}
+      \item PHP {\footnotesize (lon  time ago)}
+      \item Ruby {\footnotesize  (senior)}
+      \item Python {\footnotesize  (intermediary)}
+      \item Rust {\footnotesize (entry-level)}
+      \item Shell / Bash {\footnotesize (intermediary)}
+  \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+  \vspace{-\baselineskip}
+
+  \textbf{Methodologies}
+  \begin{itemize}
+      \item Agile
+      \item BDD / TDD
+  \end{itemize}
+
+  \textbf{Tools}
+  \begin{itemize}
+      \item Docker
+      \item Git
+      \item Kubernetes
+      \item Terraform
+      \item GraphQL
+      \item UNIX systems
+  \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+  \vspace{-\baselineskip}
+
+  \textbf{Services}
+  \begin{itemize}
+      \item Amazon Web Services
+      \item Google Cloud Plattform
+      \item Elasticsearch
+      \item Memcached
+      \item PostgreSQL/MySQL
+      \item Redis
+      \item MongoDB
+  \end{itemize}
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%  Philosophy
+%----------------------------------------------------------------------------------------
+
+\cvsect{Recommendations}
+
+\begin{minipage}[t]{\textwidth} %
+  \vspace{-\baselineskip}
+
+  Martin is simply put a brilliant guy. He can pick up new skills and utilize them efficiently in an extremely short amount of time. No challenge is too big for Martin, once the objective is set Martin will struggle through anything and blaze a path through whatever problem is obstructing him.\\
+  Martin is a vivid but valid communicator, with great social skills and a sublime intelligence where he sees problems and avoids them in development long before they’ve become problems.\\
+  Martin can be trusted to accomplish difficult tasks on his own, and excels in team-work. I highly recommend Martin as a co-worker, partner, and wish him the best of luck in his future business. Martin is one of those guys who will reach the top, no doubt about it.\\
+  \textbf{Thomas Avasol, Solutions Architect @ AWS}
+\end{minipage}
+
+\vspace{20pt}
+
+\begin{minipage}[t]{\textwidth} %
+  \vspace{-\baselineskip}
+
+  I have worked with Martin on a recent project and can highly recommend his skills when it comes to programming and delivering high quality results in accordance with set specifications.\\
+  Martin also has a professional and humble approach that makes working with him a good time.\\
+  \textbf{Jon Wingård, CEO @ OmniCore \& MyActive}
+\end{minipage}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
