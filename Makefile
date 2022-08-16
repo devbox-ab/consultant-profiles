@@ -1,12 +1,21 @@
 .PHONY: all
 
-stefan/main.pdf: stefan stefan/main.tex template.cls
-	pdflatex \
-		-output-directory stefan \
-		stefan/main.tex \
-		> /dev/null 2>&1
+all: jonas/main.pdf mange/main.pdf stefan/main.pdf
 
-all: | stefan/main.pdf
+jonas/main.pdf: jonas jonas/main.tex template.cls
+	texfot pdflatex \
+		-output-directory jonas \
+		jonas/main.tex
+
+mange/main.pdf: mange mange/main.tex template.cls
+	texfot pdflatex \
+		-output-directory mange \
+		mange/main.tex
+
+stefan/main.pdf: stefan stefan/main.tex template.cls
+	texfot pdflatex \
+		-output-directory stefan \
+		stefan/main.tex
 
 clean:
-	rm -f stefan/main.pdf
+	rm -f jonas/main.pdf mange/main.pdf stefan/main.pdf
