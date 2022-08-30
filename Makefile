@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: jonas/main.pdf mange/main.pdf stefan/main.pdf
+all: jonas/main.pdf mange/main.pdf martin/main.pdf stefan/main.pdf
 
 jonas/main.pdf: jonas jonas/main.tex template.cls
 	texfot pdflatex \
