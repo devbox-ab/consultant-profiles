@@ -19,6 +19,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[9pt]{template} % Default font size, values from 8-12pt are recommended
+\usepackage{enumitem}
 
 %----------------------------------------------------------------------------------------
 
@@ -28,12 +29,14 @@
 %  TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.55\textwidth} % 45% of the page width for name
+\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
   \vspace{-\baselineskip} % Required for vertically aligning minipages
 
   % If your name is very short, use just one of the lines below
   % If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
-  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{MARTIN ERICSON}}}} % Name
+  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Martin}}}}} % First name
+
+  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Ericson}}}}} % Last name
 
   \vspace{6pt}
 
@@ -83,12 +86,13 @@
     \baritem{Terraform}{70}
     \baritem{JavaScript}{60}
     \baritem{Python}{50}
+    \baritem{PostgreSQL}{90}
+    \baritem{MySQL}{60}
+    \baritem{SQL Server}{30}
+    \baritem{Amazon Web Services}{90}
+    \baritem{Google Cloud Platform}{80}
   \end{barchart}
 \end{minipage}
-
-\begin{center}
-  \bubbles{4/API design, 6/Backend, 4/Frontend, 5/Infra, 2/Networking}
-\end{center}
 
 
 %----------------------------------------------------------------------------------------
@@ -99,28 +103,50 @@
 
 \begin{entrylist}
   \entry
-    {Sept 2022 -- Present\\\footnotesize{via Devbox}}
+    {Nov. 2020 -- Sep. 2022\\\footnotesize{via Devbox}}
     {Software developer}
-    {ApoEx}
-    {ApoEx deals with medicine and custom medication manufacturing. While working here I was part of the team that worked on software that administrated and oversees the manufacturing and shipping of personalized medication.\\
+    {Joint Academy}
+    {Joint Academy is a healthcare company with a digital solution for treating chronic joint pain, combining physical activity, education and personal care from physical therapists.\\
+
+      I helped Joint Academy improve the maintainability of their code base by both increasing the coverage and quality of the test suite and initiate a plan to move away from a database focused way of solving issues, converting stored procedures, custom functions and complex tables into more maintainable solutions. Also helped form guidelines to align better ways of working as a developer at Joint Academy.\\
       \texttt{Ruby}\slashsep
       \texttt{PostgreSQL}\slashsep
-      \texttt{Kubernetes}\slashsep
-      \texttt{Terraform}\slashsep
-      \texttt{MSSQL}
+      \texttt{GraphQL}
+    }
+  \entry
+    {Sep. 2020 -- Oct. 2020\\\footnotesize{via Devbox}}
+    {Software developer}
+    {Babyshop}
+    {Babyshop is one of Sweden's leading online retailers for children clothing.\\
+
+      I helped Babyshop migrate their newly acquired melijoe.com brand over to their own platform using SQL to transform product data, categories, availability, pricing, translations and assets. Also built a Cloudflare worker serving all their editorial content by crawling the original Melijoe website and extracting articles, translations and assets since the original database was not accessible at the time.\\
+      \texttt{JavaScript}\slashsep
+      \texttt{SQL}
+    }
+  \entry
+    {Nov. 2018 -- Aug. 2020\\\footnotesize{via Devbox}}
+    {Software developer}
+    {ApoEx}
+    {ApoEx deals with medicine and custom medication manufacturing.\\
+
+      I was part of the team that worked on software that administrated and oversees the manufacturing and shipping of personalized medication. Helped improve the test suite for a dependent system by replacing a lot of database stubs by utilizing a real MSSQL server running in Docker. Built an app in vue.js used by Region Stockholm and Region Skåne to find out the order status of a preparation by entering a requisition number.\\
+      \texttt{Ruby}\slashsep
+      \texttt{PostgreSQL}\slashsep
+      \texttt{MSSQL}\slashsep
+      \texttt{Vue}
     }
   \entry
     {Nov. 2018 -- Present}
     {CEO}
     {Devbox AB}
-    {Based in Stockholm, Sweden, Devbox is a technical solutions company and we help our clients build highly scalable, fault-tolerant and fast web solutions.\\
-     Devbox has 3 employees as of June 2020.}
+    {Based in Stockholm, Sweden, Devbox is a technical solutions company, and we help our clients build highly scalable, fault-tolerant and fast web solutions.}
   \entry
     {Sep. 2015 -- Mar. 2019}
     {Backend developer}
     {Hemnet}
     {Hemnet is Sweden’s largest property portal and one of the largest websites overall, with millions of unique visitors each week. About 1/4 of the Swedish population visits Hemnet occasionally.\\
-      I was part of the property search team building robust user-facing features and implemented a new parallel search backend using Elasticsearch. The design was inspired by the OSI model in that we utilize layers to represent the different stages. Also worked closely with our mobile development team to replace the old legacy REST api with a new public GraphQL API.\\
+
+      I was part of the property search team building robust user-facing features and implemented a new parallel search backend using Elasticsearch. The design was inspired by the OSI model in that we utilize layers to represent the different stages. Also worked closely with our mobile development team to replace the old legacy REST API with a new public GraphQL API.\\
       \texttt{Ruby}\slashsep
       \texttt{PostgreSQL}\slashsep
       \texttt{GraphQL}\slashsep
@@ -131,7 +157,7 @@
     {Aug. 2014 -- Sep. 2015}
     {Chief Technology Officer}
     {Vimy}
-    {Vimy is a job search app. I lead a team of 4 developers. Built the backend service of the app/web in node with mongoDB running on EC2. Learned react-native and replaced our older app built in Ionic.\\
+    {Vimy is a job search app where you upload a video presentation of yourself and you get matched with companies Tinder-style. I led a team of 4 developers. Built the backend service of the app/web in node with MongoDB running on EC2. Learned react-native and replaced our older app built in Ionic.\\
       \texttt{Node}\slashsep
       \texttt{MongoDB}\slashsep
       \texttt{React native}
@@ -150,7 +176,7 @@
     {Jun. 2013 -- Oct. 2014}
     {Senior developer -> CTO}
     {Creddly AB}
-    {Creddly was a social shopping app for both iOS and Android. I was in charge of replacing an older backend API with a new backend designed as multiple services (media server, product scraper, app/web api, manager, analytics) built in node.js with mongoDB/redis as database. Set up with a no single point of failure architecture across multiple EC2 instances on AWS.\\
+    {Creddly was a social shopping app for both iOS and Android. I was in charge of replacing an older backend API with a new backend designed as multiple services (media server, product scraper, app/web API, manager, analytics) built in node.js with mongoDB/redis as database. Set up with a no single point of failure architecture across multiple EC2 instances on AWS.\\
       \texttt{Node}\slashsep
       \texttt{MongoDB}\slashsep
       \texttt{Redis}
@@ -159,7 +185,7 @@
     {2010 -- Jun. 2013\\\footnotesize{continued from previous}}
     {Chief Technology Officer}
     {Return Great AB}
-    {After being acquired by Return Great in 2012 i joined the company as CTO. Our idea was that we iterated and improved our clients business ideas, developed them and returned a great product. We were also in charge of ComHem and Mekonomens’s web based systems.\\
+    {I joined the company as CTO after being acquired by Return Great in 2012. Our idea was that we iterated and refined our client's business ideas, developed them and returned a great product. We were also in charge of ComHem and Mekonomens’s web based internal employee systems.\\
       \texttt{Python}\slashsep
       \texttt{PostgreSQL}\slashsep
       \texttt{ZeroMQ}\slashsep
@@ -170,7 +196,6 @@
     {Co-Founder}
     {Stampr}
     {While running Devbox we had a lot of different ideas we wanted to try out ourselves and Stampr was one of those ideas. The idea was to centralize all your loyalty and punch cards in a mobile app. I was in charge of developing the location based backend service.\\
-      I sold my shares in 2013 due to different views on how to run things.\\
       \texttt{Python}\slashsep
       \texttt{PostgreSQL}
     }
@@ -178,7 +203,7 @@
     {2010 -- 2012}
     {CEO}
     {Devbox}
-    {I started Devbox in 2010 as an consulting firm focusing mainly on web/iOS development, we grew to 6 employees and were later acquired by Return Great AB in 2012.}
+    {I started Devbox in 2010 as a consulting firm focusing mainly on web/iOS development, we grew to 6 employees and were later acquired by Return Great AB in 2012.}
   \entry
     {2008 -- 2010}
     {Lead Frontend developer}
@@ -194,8 +219,8 @@
     {2007 -- 2008\\\footnotesize{at Paradox Interactive}}
     {Full-stack developer}
     {GamersGate}
-    {While working at Paradox Interactive I was also the sole developer on their portal for digital distribution of their own and published PC games. When I first started they were running a custom built Joomla-template as a digital store which wasn’t ideal.\\
-      I replaced the Joomla platform with a custom built one (CMS, CRM, Analytics and Reports) written in CodeIgniter (PHP) and MySQL without downtime.\\
+    {While working at Paradox Interactive I was also the sole developer on their portal for digital distribution of their own and published PC games. When I first started they were running a custom-built Joomla-template as a digital store which wasn’t ideal.\\
+      I replaced the Joomla platform with a custom-built one (CMS, CRM, Analytics and Reports) written in CodeIgniter (PHP) and MySQL without downtime.\\
       GamersGate sales totaled 15M SEK in 2008 running my platform..\\
       \texttt{PHP}\slashsep
       \texttt{MySQL}\slashsep
@@ -214,7 +239,7 @@
     {2002}
     {Founder}
     {ecrana.se}
-    {While learning how to build web pages in PHP with MySQL i built my own text-based action-RPG which after launch grew to 15,000 active users (1,500 concurrent) \textbf{in a week}. I ran my project on a small 29 SEK a month web-hotel and unfortunately was shutdown after only a week due to too much traffic. Since I was only 15 at the time with no monetization and no income I had to permanently shut down the project.\\
+    {While learning how to build web pages in PHP with MySQL I built my own text-based action-RPG which after launch grew to 15,000 active users (1,500 concurrent) \textbf{in a week}. I ran my project on a small 29 SEK a month web-hotel and unfortunately was shutdown after only a week due to too much traffic. Since I was only 15 at the time with no monetization and no income, I had to permanently shut down the project.\\
       \texttt{PHP}\slashsep
       \texttt{MySQL}\slashsep
       \texttt{Apache}
@@ -227,7 +252,7 @@
 %  ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.2\textwidth}
+\begin{minipage}[t]{0.20\textwidth}
   \vspace{-\baselineskip} % Required for vertically aligning minipages
 
   \cvsect{Languages}
@@ -236,21 +261,25 @@
   \textbf{English} - proficient
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.39\textwidth}
+\begin{minipage}[t]{0.46\textwidth}
   \vspace{-\baselineskip} % Required for vertically aligning minipages
 
   \cvsect{Personal life \& Hobbies}
 
-  I’m 33 years old and I live in Stureby, Enskede with my wife and 3 kids.\\
-  As hobbies I love riding my custom built road bike, playing golf, watching movies and playing video games.
+  Born in Dalarna in -87, moved to Stockholm in 2006 and is currently living in Stureby, Enskede with my wife and 3 UFC-prepping boys.\\
+
+  Hobbies consist of playing golf, reading, F1, working out, watching movies and playing video games.
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.30\textwidth}
   \vspace{-\baselineskip} % Required for vertically aligning minipages
 
   \cvsect{Certificates}
 
-  \begin{itemize}
+  \vspace{-3mm}
+  \begin{itemize}[leftmargin=12pt]
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt plus 1pt}
     \item AWS Developer {\footnotesize{Associate}}
     \item AWS Solutions Architect {\footnotesize{Associate}}
   \end{itemize}
@@ -321,9 +350,12 @@
 \begin{minipage}[t]{\textwidth} %
   \vspace{-\baselineskip}
 
-  Martin is simply put a brilliant guy. He can pick up new skills and utilize them efficiently in an extremely short amount of time. No challenge is too big for Martin, once the objective is set Martin will struggle through anything and blaze a path through whatever problem is obstructing him.\\
+  Martin is simply put a brilliant guy. He can pick up new skills and utilize them efficiently in an extremely short amount of time. No challenge is too big for Martin, once the objective is set, Martin will struggle through anything and blaze a path through whatever problem is obstructing him.\\
+
   Martin is a vivid but valid communicator, with great social skills and a sublime intelligence where he sees problems and avoids them in development long before they’ve become problems.\\
+
   Martin can be trusted to accomplish difficult tasks on his own, and excels in team-work. I highly recommend Martin as a co-worker, partner, and wish him the best of luck in his future business. Martin is one of those guys who will reach the top, no doubt about it.\\
+
   \textbf{Thomas Avasol, Solutions Architect @ AWS}
 \end{minipage}
 
@@ -333,7 +365,9 @@
   \vspace{-\baselineskip}
 
   I have worked with Martin on a recent project and can highly recommend his skills when it comes to programming and delivering high quality results in accordance with set specifications.\\
+
   Martin also has a professional and humble approach that makes working with him a good time.\\
+
   \textbf{Jon Wingård, CEO @ OmniCore \& MyActive}
 \end{minipage}
 

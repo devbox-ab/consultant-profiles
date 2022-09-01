@@ -192,10 +192,10 @@
 }
 
 \newcommand{\entry}[4]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
-  \parbox[t]{0.20\textwidth}{% 20% of the text width of the page
+  \parbox[t]{0.22\textwidth}{% 22% of the text width of the page
     #1 % Leftmost entry date(s) text
   }%
-  &\parbox[t]{0.80\textwidth}{% 80% of the text width of the page
+  &\parbox[t]{0.78\textwidth}{% 78% of the text width of the page
     \textbf{#2}% Entry heading text
     \hfill% Horizontal whitespace
     {\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
