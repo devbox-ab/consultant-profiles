@@ -1,6 +1,11 @@
-.PHONY: all
+.PHONY: all update update-submodules
 
 all: jonas/main.pdf mange/Devbox_MagnusBergmark_profile.pdf martin/main.pdf stefan/main.pdf
+
+update: | update-submodules all
+
+update-submodules:
+	git submodule update --init --recursive --remote
 
 jonas/main.pdf: jonas jonas/main.tex template.cls
 	texfot pdflatex \
