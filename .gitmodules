@@ -1,0 +1,3 @@
+[submodule "mange/upstream"]
+	path = mange/upstream
+	url = https://github.com/Mange/me.git

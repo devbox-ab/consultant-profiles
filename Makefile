@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: jonas/main.pdf mange/main.pdf martin/main.pdf stefan/main.pdf
+all: jonas/main.pdf mange/Devbox_MagnusBergmark_profile.pdf martin/main.pdf stefan/main.pdf
 
 jonas/main.pdf: jonas jonas/main.tex template.cls
 	texfot pdflatex \
@@ -8,11 +8,11 @@ jonas/main.pdf: jonas jonas/main.tex template.cls
 		-jobname=Devbox_JonasLiljestrand_profile \
 		jonas/main.tex
 
-mange/main.pdf: mange mange/main.tex template.cls
-	texfot pdflatex \
-		-output-directory mange \
-		-jobname=Devbox_MagnusBergmark_profile \
-		mange/main.tex
+mange/upstream:
+	git submodule update --init mange/upstream
+
+mange/Devbox_MagnusBergmark_profile.pdf: mange/upstream mange/upstream/cv.pdf
+	cp mange/upstream/cv.pdf mange/Devbox_MagnusBergmark_profile.pdf
 
 martin/main.pdf: martin martin/main.tex template.cls
 	texfot pdflatex \
