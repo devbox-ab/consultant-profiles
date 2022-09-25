@@ -18,6 +18,8 @@ Devbox Consultant Profiles are based on this LaTeX template, released under the 
 
 Build all profile with `make` in project root.
 
+To update all external sources and then make the files, run `make update`.
+
 ## Dependencies
 
 ### MacOS
