@@ -7,7 +7,6 @@ A list of developers sorted by ascending alphabetical name (not skill-level 😉
 * [Jonas Liljestrand](jonas/Devbox_JonasLiljestrand_profile.pdf)
 * [Magnus Bergmark](mange/Devbox_MagnusBergmark_profile.pdf)
 * [Martin Ericson](martin/Devbox_MartinEricson_profile.pdf)
-* [Stefan Åhman](stefan/Devbox_StefanAhman_profile.pdf)
 
 ---
 

@@ -1,6 +1,6 @@
 .PHONY: all update update-submodules
 
-all: jonas/Devbox_JonasLiljestrand_profile.pdf mange/Devbox_MagnusBergmark_profile.pdf martin/Devbox_MartinEricson_profile.pdf stefan/Devbox_StefanAhman_profile.pdf
+all: jonas/Devbox_JonasLiljestrand_profile.pdf mange/Devbox_MagnusBergmark_profile.pdf martin/Devbox_MartinEricson_profile.pdf
 
 update: | update-submodules all
 
@@ -22,17 +22,10 @@ martin/Devbox_MartinEricson_profile.pdf: martin martin/main.tex template.cls
 		-jobname=Devbox_MartinEricson_profile \
 		martin/main.tex
 
-stefan/Devbox_StefanAhman_profile.pdf: stefan stefan/main.tex template.cls
-	texfot pdflatex \
-		-output-directory stefan \
-		-jobname=Devbox_StefanAhman_profile \
-		stefan/main.tex
-
 mange/upstream:
 	git submodule update --init mange/upstream
 
 clean:
 	rm -f jonas/Devbox_JonasLiljestrand_profile.pdf \
 		mange/Devbox_MagnusBergmark_profile.pdf \
-		martin/Devbox_MartinEricson_profile.pdf \
-		stefan/Devbox_StefanAhman_profile.pdf
+		martin/Devbox_MartinEricson_profile.pdf
